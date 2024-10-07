@@ -1,0 +1,1 @@
+file = open('sygnaly.txt', mode='r')
