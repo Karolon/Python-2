@@ -4,6 +4,7 @@ data = []
 for f in file:
   data.append(f.strip())
 
+
 anser1 =[]
 for i in range(39,len(data),40):
   anser1.append(data[i][9]) 
@@ -29,3 +30,4 @@ print(anser2)
 file = open(file='plik.txt', mode='w')
 print(anser1, file=file)
 print(len(anser2))
+#pisze tutaj
