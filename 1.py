@@ -1,3 +1,4 @@
+
 file = open(file ='sygnaly.txt', mode='r')
 
 data = []
