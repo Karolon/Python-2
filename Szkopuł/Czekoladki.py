@@ -1,3 +1,2 @@
-data = input()
-data.split()
-print((data[0]*data[1])+(data[2]*data[3]))
+data = input().split()
+print((int(data[0])*int(data[1]))+(int(data[2])*int(data[3])))
