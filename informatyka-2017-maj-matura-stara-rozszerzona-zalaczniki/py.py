@@ -38,4 +38,4 @@ for d in data:
         shortest = d
       break
   
-print(amount, shortest)
+print(amount, len(shortest))
