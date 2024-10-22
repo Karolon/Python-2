@@ -1,3 +1,4 @@
+
 file = open('binarne.txt')
 
 data =[]
