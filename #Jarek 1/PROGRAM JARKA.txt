@@ -1,0 +1,140 @@
+#include <iostream>
+#include <fstream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+	ifstream file("Zabawa.txt");
+	string name = "";
+	string names[200];//tablica imion
+	int nums[200][3];//tablica liczb
+	int k = 0;
+	while(file>>name)
+	{
+		names[k] = name;
+		file >> nums[k][0];
+		file >> nums[k][1];
+		file >> nums[k][2];
+		k++;
+	}
+	int counterA = 0;
+	string zleimiona[200] = {""};
+	int zleliczby[200] = {5555};
+	int s = 0;
+	for (int i = 0;i < 200;i++)
+	{
+		int ile = 0;
+		for (int j = 0;j < 200;j++)
+		{
+			if (names[i][0] == names[j][0])
+			{
+				ile++;
+			}
+		}
+
+		for (int j = 0;j < 3;j++)
+		{
+			if (ile == nums[i][j])
+			{
+				counterA++;
+			}
+
+		}
+		if (ile != nums[i][0] && ile != nums[i][1] && ile != nums[i][2])
+		{
+			zleimiona[s] = names[i];
+			int roznica = 999999999;
+			for (int j = 0;j < 3;j++)
+			{
+				if (abs(nums[i][j] - ile) < roznica)
+				{
+					zleliczby[s] = nums[i][j];
+					roznica = abs(nums[i][j] - ile);
+				}
+				else if (abs(nums[i][j] - ile) == roznica)
+				{
+					if (zleliczby[s] > nums[i][j])
+					{
+						zleliczby[s] = nums[i][j];
+					}
+				}
+			}
+			s++;
+		}
+	}
+	cout << counterA<<endl;
+	for (int i = 0;i < s;i++)
+	{
+		if (zleimiona[i].length() == 9)
+		{
+			cout << zleimiona[i] << " "<< zleliczby[i] << endl;
+		}
+	}
+	cout << endl << endl;
+	for (int i = 0;i < 200;i++)
+	{
+		for (int j = 0;j < 3;j++)
+		{
+			if (names[i].length() == nums[i][j])
+			{
+				cout << names[i] << endl;
+			}
+		}
+
+
+	}
+	cout << endl << endl;
+
+	counterA = 0;
+	string zleimionaB[200] = { "" };
+	int zleliczbyB[200] = { 5555 };
+	s = 0;
+	for (int i = 0;i < 200;i++)
+	{
+		int ile = 0;
+		for (int j = 0;j < 200;j++)
+		{
+			if (names[i][0] == names[j][0])
+			{
+				ile++;
+			}
+		}
+
+		for (int j = 0;j < 3;j++)
+		{
+			if (ile == nums[i][j])
+			{
+				counterA++;
+			}
+
+		}
+		if (ile != nums[i][0] && ile != nums[i][1] && ile != nums[i][2] && names[i].length()<5)
+		{
+			zleimionaB[s] = names[i];
+			int roznica = 999999999;
+			for (int j = 0;j < 3;j++)
+			{
+				if (abs(nums[i][j] - ile) < roznica)
+				{
+					zleliczbyB[s] = nums[i][j];
+					roznica = abs(nums[i][j] - ile);
+				}
+				else if (abs(nums[i][j] - ile) == roznica)
+				{
+					if (zleliczbyB[s] > nums[i][j])
+					{
+						zleliczbyB[s] = nums[i][j];
+					}
+				}
+			}
+			s++;
+		}
+	}
+	for (int i = 0;i < s;i++)
+	{
+			cout << zleimionaB[i]  << endl;
+	
+	}
+}
