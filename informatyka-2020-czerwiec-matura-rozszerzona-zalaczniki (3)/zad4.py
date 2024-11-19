@@ -65,4 +65,5 @@ print(min(data2), file = file_ans)
 
 
 
-file_ans.close()
+file_ans.close( 
+               
