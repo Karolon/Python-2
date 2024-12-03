@@ -30,7 +30,7 @@ def decToBin_calc():
   ans = x + '.' + y
 
   print(ans)
-  
+
 
 def BinToDec_calc():
   def bin2dec(x):
