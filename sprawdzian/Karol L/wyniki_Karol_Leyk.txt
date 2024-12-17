@@ -1,0 +1,15 @@
+#1
+r�znica: 698
+mediana: 349
+
+#2
+napis: zajhbsjdlikjewfo;pwqurfrvcxlmytq
+wiersz: 89
+
+#3
+mniejsze: 59
+wi�krze: 41
+r�wne: 0
+
+#4
+624 252 540 496 688
