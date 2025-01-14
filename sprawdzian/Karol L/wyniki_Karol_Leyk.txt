@@ -1,5 +1,6 @@
 #1
-r�znica: 698
+długość: 23
+róznica: 698
 mediana: 349
 
 #2
@@ -8,8 +9,8 @@ wiersz: 89
 
 #3
 mniejsze: 59
-wi�krze: 41
-r�wne: 0
+więkrze: 41
+równe: 0
 
 #4
 624 252 540 496 688

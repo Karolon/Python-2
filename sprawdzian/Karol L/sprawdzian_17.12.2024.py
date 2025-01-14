@@ -32,6 +32,7 @@ def konstyntanopolitańczykowianeczka(n):
     
 róznica = [0, 0, 0] #mniejsza równa większa
 primes = []
+print(primes)
 maks_znaki = ['', 0, 0] #słowo, wiersz, długość
 wiersz = 1
 dzielniki = []
@@ -61,11 +62,13 @@ for f in file:
 
 
 
-file_ans = open('wyniki_Karol_Leyk.txt', 'w')
+file_ans = open('wyniki_Karol_Leyk.txt', 'w', encoding='UTF-8')
 
 print('#1', file = file_ans)
-print('róznica:', max(primes) - min(primes), file = file_ans)
 leng = len(primes)
+print('długość:', leng, file = file_ans)
+print('róznica:', max(primes) - min(primes), file = file_ans)
+
 primes.sort()
 if leng % 2 == 0:
   print('mediana:', (primes[leng//2-1] + primes[leng//2])/2, file = file_ans)
